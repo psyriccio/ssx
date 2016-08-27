@@ -1,0 +1,77 @@
+object aboutfo: taboutfo
+  color = -1610612731
+  visible = False
+  bounds_x = 71
+  bounds_y = 456
+  bounds_cx = 431
+  bounds_cy = 440
+  container.frame.localprops = []
+  container.frame.localprops1 = []
+  container.bounds = (
+    0
+    0
+    431
+    440
+  )
+  optionswindow = [wo_popup]
+  options = [fo_screencentered, fo_closeonesc, fo_closeonf10, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savezorder, fo_savestate]
+  onchildmouseevent = on_mouseevents
+  moduleclassname = 'tmseform'
+  object tlabel1: tlabel
+    optionswidget1 = [ow1_fontglyphheight, ow1_autoscale, ow1_autoheight]
+    bounds_x = 24
+    bounds_y = 32
+    bounds_cx = 380
+    bounds_cy = 42
+    caption = 'A graphical frontend for su and sudo (X11)'#10'Under GPL2'#10'ver 2.0'
+    textflags = [tf_ycentered, tf_wordbreak]
+    reffontheight = 14
+  end
+  object trichbutton3: trichbutton
+    Tag = 1
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = ssxfo.tframecomp1
+    face.fade_direction = gd_down
+    face.localprops = [fal_fadirection]
+    face.template = ssxfo.tfacecomp1
+    taborder = 1
+    bounds_x = 352
+    bounds_y = 400
+    bounds_cx = 66
+    bounds_cy = 28
+    state = [as_localcaption, as_localonexecute]
+    faceclicked.fade_pos.count = 2
+    faceclicked.fade_pos.items = (
+      0
+      1
+    )
+    faceclicked.fade_color.count = 2
+    faceclicked.fade_color.items = (
+      -1610612732
+      -1610612731
+    )
+    faceclicked.fade_direction = gd_down
+    faceclicked.localprops = [fal_fadirection]
+    caption = 'Close'
+    onexecute = on_close
+  end
+  object ttoolbar1: ttoolbar
+    frame.caption = 'About ssx'
+    frame.captionpos = cp_center
+    frame.localprops = []
+    frame.localprops1 = []
+    taborder = 2
+    bounds_x = 0
+    bounds_y = 0
+    bounds_cx = 431
+    bounds_cy = 20
+    anchors = [an_top]
+  end
+  object timer_move: ttimer
+    interval = 0
+    ontimer = on_timer
+    left = 248
+    top = 80
+  end
+end

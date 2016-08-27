@@ -1,0 +1,488 @@
+object ssxfo: tssxfo
+  color = -1610612731
+  bounds_x = 744
+  bounds_y = 51
+  bounds_cx = 453
+  bounds_cy = 368
+  bounds_cxmin = 453
+  bounds_cymin = 368
+  bounds_cxmax = 453
+  bounds_cymax = 368
+  container.frame.localprops = []
+  container.frame.localprops1 = []
+  container.bounds = (
+    0
+    0
+    453
+    368
+  )
+  optionswindow = [wo_popup, wo_groupleader, wo_taskbar, wo_windowcentermessage]
+  options = [fo_main, fo_terminateonclose, fo_screencentered, fo_closeonesc, fo_closeonf10, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savezorder, fo_savestate]
+  oncreate = on_formcreate
+  onclose = on_formclose
+  onchildmouseevent = on_mouseevents
+  moduleclassname = 'tmainform'
+  object trichbutton1: trichbutton
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = tframecomp1
+    face.localprops = []
+    face.template = tfacecomp1
+    taborder = 4
+    bounds_x = 120
+    bounds_y = 329
+    bounds_cx = 66
+    bounds_cy = 28
+    state = [as_localcaption, as_localonexecute]
+    faceclicked.fade_pos.count = 2
+    faceclicked.fade_pos.items = (
+      0
+      1
+    )
+    faceclicked.fade_color.count = 2
+    faceclicked.fade_color.items = (
+      -1610612732
+      -1610612731
+    )
+    faceclicked.fade_direction = gd_down
+    faceclicked.localprops = [fal_fadirection]
+    caption = 'Run'
+    onexecute = on_run
+  end
+  object trichbutton2: trichbutton
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = tframecomp1
+    face.localprops = []
+    face.template = tfacecomp1
+    taborder = 5
+    bounds_x = 200
+    bounds_y = 329
+    bounds_cx = 162
+    bounds_cy = 28
+    state = [as_localcaption, as_localonexecute]
+    faceclicked.fade_pos.count = 2
+    faceclicked.fade_pos.items = (
+      0
+      1
+    )
+    faceclicked.fade_color.count = 2
+    faceclicked.fade_color.items = (
+      -1610612732
+      -1610612731
+    )
+    faceclicked.fade_direction = gd_down
+    faceclicked.localprops = [fal_fadirection]
+    caption = 'Run as Current User'
+    onexecute = on_run
+  end
+  object trichbutton3: trichbutton
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = tframecomp1
+    face.localprops = []
+    face.template = tfacecomp1
+    taborder = 6
+    bounds_x = 376
+    bounds_y = 329
+    bounds_cx = 66
+    bounds_cy = 28
+    state = [as_localcaption, as_localonexecute]
+    faceclicked.fade_pos.count = 2
+    faceclicked.fade_pos.items = (
+      0
+      1
+    )
+    faceclicked.fade_color.count = 2
+    faceclicked.fade_color.items = (
+      -1610612732
+      -1610612731
+    )
+    faceclicked.fade_direction = gd_down
+    faceclicked.localprops = [fal_fadirection]
+    caption = 'Close'
+    onexecute = on_closeform
+  end
+  object se_password: tstringedit
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_parenttabfocus, ow_arrowfocus, ow_destroywidgets]
+    frame.levelo = 0
+    frame.framewidth = 1
+    frame.colorframe = -1610612732
+    frame.caption = 'Password'
+    frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+    frame.localprops1 = []
+    frame.outerframe = (
+      0
+      17
+      0
+      0
+    )
+    popupmenu = tpopupmenu1
+    bounds_x = 48
+    bounds_y = 47
+    bounds_cx = 388
+    bounds_cy = 38
+    optionsedit1 = [oe1_keyexecute]
+    onkeyup = on_keyup
+    reffontheight = 14
+    pwchar = 42
+  end
+  object ber1: tbooleaneditradio
+    frame.levelo = 0
+    frame.framewidth = 1
+    frame.colorframe = -1610612732
+    frame.caption = 'su'
+    frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+    frame.localprops1 = []
+    frame.outerframe = (
+      0
+      1
+      17
+      2
+    )
+    taborder = 1
+    popupmenu = tpopupmenu1
+    bounds_x = 112
+    bounds_y = 103
+    bounds_cx = 30
+    bounds_cy = 16
+    onsetvalue = on_change_enter_method
+  end
+  object ber2: tbooleaneditradio
+    frame.levelo = 0
+    frame.framewidth = 1
+    frame.colorframe = -1610612732
+    frame.caption = 'su - '
+    frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+    frame.localprops1 = []
+    frame.outerframe = (
+      0
+      1
+      29
+      2
+    )
+    taborder = 2
+    popupmenu = tpopupmenu1
+    bounds_x = 112
+    bounds_y = 127
+    bounds_cx = 42
+    bounds_cy = 16
+    onsetvalue = on_change_enter_method
+  end
+  object ber3: tbooleaneditradio
+    frame.levelo = 0
+    frame.framewidth = 1
+    frame.colorframe = -1610612732
+    frame.caption = 'sudo'
+    frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+    frame.localprops1 = []
+    frame.outerframe = (
+      0
+      1
+      32
+      2
+    )
+    taborder = 3
+    popupmenu = tpopupmenu1
+    bounds_x = 112
+    bounds_y = 151
+    bounds_cx = 45
+    bounds_cy = 16
+    onsetvalue = on_change_enter_method
+  end
+  object term_cur: tterminal
+    frame.localprops = []
+    frame.localprops1 = []
+    taborder = 8
+    visible = False
+    bounds_x = 328
+    bounds_y = 32
+    bounds_cx = 28
+    onprocfinished = on_closeform
+    reffontheight = 14
+  end
+  object term: tterminal
+    frame.localprops = []
+    frame.localprops1 = []
+    taborder = 9
+    visible = False
+    bounds_x = 368
+    bounds_y = 32
+    bounds_cx = 28
+    onprocfinished = on_prog_finush
+    onreceivetext = on_receive_text
+    optionsprocess = [pro_output, pro_input, pro_errorouttoout, pro_inactive, pro_sessionleader, pro_tty, pro_winpipewritehandles, pro_ctrlc]
+    reffontheight = 14
+  end
+  object term2: tterminal
+    frame.localprops = []
+    frame.localprops1 = []
+    taborder = 10
+    visible = False
+    bounds_x = 408
+    bounds_y = 32
+    bounds_cx = 28
+    onprocfinished = on_closeform
+    onreceivetext = on_receive_text
+    optionsprocess = [pro_output, pro_input, pro_errorouttoout, pro_inactive, pro_sessionleader, pro_tty, pro_winpipewritehandles, pro_ctrlc]
+    reffontheight = 14
+  end
+  object s_adds: tspacer
+    taborder = 11
+    visible = True
+    bounds_x = 48
+    bounds_y = 180
+    bounds_cx = 394
+    bounds_cy = 106
+    object ie_: tintegeredit
+      frame.levelo = 0
+      frame.framewidth = 1
+      frame.colorframe = -1610612732
+      frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+      frame.localprops1 = []
+      popupmenu = tpopupmenu1
+      bounds_x = 193
+      bounds_y = 6
+      bounds_cx = 44
+      textflagsactive = [tf_right, tf_ycentered]
+      max = 1000
+      reffontheight = 14
+    end
+    object tspacer1: tspacer
+      taborder = 1
+      bounds_x = 188
+      bounds_y = 0
+      bounds_cx = 5
+      bounds_cy = 26
+      linkleft = be_runutilsviadisplay
+      linkright = ie_
+    end
+    object be_runutilsviadisplay: tbooleanedit
+      frame.levelo = 0
+      frame.framewidth = 1
+      frame.colorframe = -1610612732
+      frame.caption = 'Run via ''Export DISPLAY=:'''
+      frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+      frame.localprops1 = []
+      frame.outerframe = (
+        0
+        1
+        166
+        2
+      )
+      taborder = 2
+      popupmenu = tpopupmenu1
+      bounds_x = 10
+      bounds_y = 9
+      bounds_cx = 179
+      bounds_cy = 16
+    end
+    object ber_rem: tbooleanedit
+      frame.levelo = 0
+      frame.framewidth = 1
+      frame.colorframe = -1610612732
+      frame.caption = 'Remember passwords (use at your own risk)'
+      frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+      frame.localprops1 = []
+      frame.outerframe = (
+        0
+        1
+        272
+        2
+      )
+      taborder = 3
+      popupmenu = tpopupmenu1
+      bounds_x = 10
+      bounds_y = 33
+      bounds_cx = 285
+      bounds_cy = 16
+    end
+    object ber_locale: tbooleanedit
+      frame.levelo = 0
+      frame.framewidth = 1
+      frame.colorframe = -1610612732
+      frame.caption = 'Set locale'
+      frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+      frame.localprops1 = []
+      frame.outerframe = (
+        0
+        1
+        61
+        2
+      )
+      taborder = 4
+      popupmenu = tpopupmenu1
+      bounds_x = 10
+      bounds_y = 57
+      bounds_cx = 74
+      bounds_cy = 16
+      onsetvalue = on_set_locales_enabled
+    end
+    object tspacer4: tspacer
+      taborder = 5
+      bounds_x = 84
+      bounds_y = 56
+      bounds_cx = 5
+      bounds_cy = 26
+      linkleft = ber_locale
+      linkright = dd_locale
+    end
+    object dd_locale: tdropdownlistedit
+      frame.framewidth = 1
+      frame.colorframe = -1610612732
+      frame.localprops = [frl_framewidth, frl_colorframe, frl_colorclient]
+      frame.localprops1 = []
+      frame.template = tframecomp1
+      frame.button.face.localprops = []
+      frame.button.face.template = tfacecomp1
+      frame.button.frame.localprops = []
+      frame.button.frame.localprops1 = []
+      frame.button.frame.template = tframecomp1
+      taborder = 6
+      popupmenu = tpopupmenu1
+      enabled = False
+      bounds_x = 89
+      bounds_y = 55
+      bounds_cx = 145
+      dropdown.cols.count = 1
+      dropdown.cols.items = <      
+        item
+        end>
+      reffontheight = 14
+    end
+    object ber_xhost: tbooleanedit
+      frame.levelo = 0
+      frame.framewidth = 1
+      frame.colorframe = -1610612732
+      frame.caption = 'Run command "xhost local:root" before'
+      frame.localprops = [frl_levelo, frl_framewidth, frl_colorframe]
+      frame.localprops1 = []
+      frame.outerframe = (
+        0
+        1
+        242
+        2
+      )
+      taborder = 7
+      popupmenu = tpopupmenu1
+      bounds_x = 10
+      bounds_y = 81
+      bounds_cx = 255
+      bounds_cy = 16
+    end
+  end
+  object l_out: tlabel
+    taborder = 7
+    bounds_x = 48
+    bounds_y = 300
+    bounds_cx = 28
+    bounds_cy = 14
+    caption = '       '
+    font.style = [fs_bold]
+    font.name = 'stf_default'
+    font.xscale = 1
+    font.localprops = [flp_style, flp_xscale]
+    reffontheight = 14
+  end
+  object ttoolbar1: ttoolbar
+    frame.caption = 'About ssx'
+    frame.captionpos = cp_center
+    frame.localprops = []
+    frame.localprops1 = []
+    taborder = 12
+    bounds_x = 0
+    bounds_y = 0
+    bounds_cx = 453
+    bounds_cy = 20
+    anchors = [an_top]
+    object trichbutton4: trichbutton
+      optionswidget1 = [ow1_autoscale, ow1_autowidth]
+      frame.optionsskin = [fso_flat, fso_nomouseanim, fso_nofocusanim, fso_nodefaultrect, fso_noinnerrect]
+      frame.localprops = [frl_framewidth, frl_optionsskin]
+      frame.localprops1 = []
+      face.fade_pos.count = 2
+      face.fade_pos.items = (
+        0
+        1
+      )
+      face.fade_color.count = 2
+      face.fade_color.items = (
+        15461355
+        12895428
+      )
+      face.fade_direction = gd_down
+      face.localprops = [fal_fadirection]
+      bounds_x = 419
+      bounds_y = 1
+      bounds_cx = 34
+      bounds_cy = 17
+      anchors = [an_top, an_right]
+      state = [as_localcaption, as_localonexecute]
+      faceclicked.fade_pos.count = 2
+      faceclicked.fade_pos.items = (
+        0
+        1
+      )
+      faceclicked.fade_color.count = 2
+      faceclicked.fade_color.items = (
+        -1610612732
+        -1610612731
+      )
+      faceclicked.fade_direction = gd_down
+      faceclicked.localprops = [fal_fadirection]
+      caption = ' (?) '
+      onexecute = on_showabout
+    end
+  end
+  object tlabel1: tlabel
+    color = -2147483645
+    taborder = 13
+    bounds_x = 6
+    bounds_y = 276
+    bounds_cx = 21
+    bounds_cy = 80
+    anchors = [an_left, an_bottom]
+    caption = 'SSX'
+    font.color = -1610612732
+    font.shadow_color = -1610612733
+    font.shadow_shiftx = 2
+    font.shadow_shifty = -2
+    font.height = 18
+    font.style = [fs_bold, fs_italic]
+    font.name = 'stf_default'
+    font.xscale = 2
+    font.localprops = [flp_color, flp_shadow_color, flp_shadow_shiftx, flp_shadow_shifty, flp_style, flp_xscale]
+    textflags = [tf_ycentered, tf_rotate90]
+    reffontheight = 21
+  end
+  object timer_move: ttimer
+    interval = 0
+    ontimer = on_timer
+    left = 200
+    top = 128
+  end
+  object tfacecomp1: tfacecomp
+    template.fade_pos.count = 2
+    template.fade_pos.items = (
+      0
+      1
+    )
+    template.fade_color.count = 2
+    template.fade_color.items = (
+      15461355
+      12895428
+    )
+    template.fade_direction = gd_down
+    left = 328
+    top = 96
+  end
+  object tframecomp1: tframecomp
+    template.optionsskin = [fso_flat, fso_nomouseanim, fso_nofocusanim, fso_nofocusrect, fso_nodefaultrect, fso_noinnerrect]
+    left = 328
+    top = 128
+  end
+  object tpopupmenu1: tpopupmenu
+    left = 200
+    top = 96
+  end
+end
